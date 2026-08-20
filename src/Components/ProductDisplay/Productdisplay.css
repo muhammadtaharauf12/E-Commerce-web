@@ -1,0 +1,451 @@
+/* ================================
+   PRODUCT DISPLAY
+================================ */
+
+.productdisplay {
+  width: 90%;
+  max-width: 1250px;
+
+  margin: 70px auto;
+
+  display: flex;
+  gap: 70px;
+
+  color: #171717;
+}
+
+
+/* ================================
+   LEFT SECTION
+================================ */
+
+.productdisplay-left {
+  width: 55%;
+
+  display: flex;
+  gap: 18px;
+}
+
+
+/* Small Images */
+
+.productdisplay-img-list {
+  width: 95px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.productdisplay-img-list img {
+  width: 90px;
+  height: 110px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  border: 1px solid #e5e5e5;
+
+  transition: all 0.3s ease;
+}
+
+.productdisplay-img-list img:hover {
+  border-color: #ff4141;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(255, 65, 65, 0.12);
+}
+
+
+/* Main Image */
+
+.productdisplay-img {
+  flex: 1;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #f7f7f7;
+}
+
+.productdisplay-main-img {
+  width: 100%;
+  height: 100%;
+
+  max-height: 650px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.productdisplay-img:hover .productdisplay-main-img {
+  transform: scale(1.04);
+}
+
+
+/* ================================
+   RIGHT SECTION
+================================ */
+
+.productdisplay-right {
+  width: 45%;
+
+  padding-top: 10px;
+}
+
+
+/* Product Name */
+
+.productdisplay-right h1 {
+  margin: 0 0 18px;
+
+  font-size: 34px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  color: #171717;
+}
+
+
+/* ================================
+   STAR RATING
+================================ */
+
+.productdisplay-right-star {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 25px;
+}
+
+.productdisplay-right-star img {
+  width: 18px;
+  height: 18px;
+}
+
+.productdisplay-right-star p {
+  margin-left: 8px;
+
+  font-size: 14px;
+
+  color: #777;
+}
+
+
+/* ================================
+   PRICE
+================================ */
+
+.productdisplay-right-prices {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.productdisplay-right-oldprice {
+  font-size: 18px;
+
+  color: #999;
+
+  text-decoration: line-through;
+}
+
+.productdisplay-right-newprice {
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #ff4141;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.productdisplay-right-description {
+  max-width: 540px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #777;
+
+  margin-bottom: 30px;
+}
+
+
+/* ================================
+   SIZE SECTION
+================================ */
+
+.productdisplay-right-size {
+  margin-bottom: 28px;
+}
+
+/* Heading */
+
+.productdisplay-right-size > h1 {
+  font-size: 17px;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+
+/*
+   IMPORTANT:
+   Your inner size div currently
+   also has productdisplay-right-size.
+
+   Better use:
+   productdisplay-size-options
+*/
+
+.productdisplay-right-size {
+  margin-top: 25px;
+}
+
+.productdisplay-right-size h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* S M L XL XXL */
+
+.productdisplay-right-size-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.productdisplay-right-size-options div {
+  width: 52px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background: #fff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.productdisplay-right-size-options div:hover {
+  border-color: #ff4141;
+  color: #ff4141;
+  background: #fff5f5;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 15px rgba(255, 65, 65, 0.12);
+}
+
+
+/* ================================
+   ADD TO CART
+================================ */
+
+.productdisplay-right > button {
+  width: 210px;
+  height: 54px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #ff4141,
+    #ff6666
+  );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.7px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(255, 65, 65, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+.productdisplay-right > button:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    135deg,
+    #e83232,
+    #ff4f4f
+  );
+
+  box-shadow:
+    0 15px 30px rgba(255, 65, 65, 0.3);
+}
+
+.productdisplay-right > button:active {
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   CATEGORY & TAGS
+================================ */
+
+.productdisplay-right-category {
+  margin: 18px 0 0;
+
+  font-size: 13px;
+
+  color: #888;
+}
+
+.productdisplay-right-category span {
+  font-weight: 600;
+
+  color: #444;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+  .productdisplay {
+    gap: 40px;
+  }
+
+  .productdisplay-right h1 {
+    font-size: 28px;
+  }
+
+  .productdisplay-right-newprice {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .productdisplay {
+    width: 92%;
+
+    flex-direction: column;
+
+    gap: 40px;
+
+    margin: 40px auto;
+  }
+
+  .productdisplay-left {
+    width: 100%;
+  }
+
+  .productdisplay-right {
+    width: 100%;
+  }
+
+  .productdisplay-img-list {
+    width: 75px;
+  }
+
+  .productdisplay-img-list img {
+    width: 70px;
+    height: 85px;
+  }
+
+  .productdisplay-main-img {
+    max-height: 550px;
+  }
+
+  .productdisplay-right h1 {
+    font-size: 27px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .productdisplay {
+    width: 94%;
+
+    margin-top: 25px;
+  }
+
+  .productdisplay-left {
+    gap: 10px;
+  }
+
+  .productdisplay-img-list {
+    width: 58px;
+
+    gap: 8px;
+  }
+
+  .productdisplay-img-list img {
+    width: 55px;
+    height: 70px;
+
+    border-radius: 7px;
+  }
+
+  .productdisplay-main-img {
+    max-height: 430px;
+  }
+
+  .productdisplay-right h1 {
+    font-size: 24px;
+  }
+
+  .productdisplay-right-newprice {
+    font-size: 23px;
+  }
+
+  .productdisplay-right-description {
+    font-size: 13px;
+  }
+
+  .productdisplay-right > button {
+    width: 100%;
+  }
+}

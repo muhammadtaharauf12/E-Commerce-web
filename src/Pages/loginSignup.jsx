@@ -1,26 +1,66 @@
 import React from 'react'
-import './CSS/loginSignup.css'
+import './CSS/LoginSignup.css'
 
-const loginSignup = () => {
+const LoginSignup = () => {
   return (
-    <div className='loginsignup'>
+    <div className="loginsignup">
       <div className="loginsignup-container">
-        <h1>Sign Up</h1>
-        <div className="loginsignup-fields">
-          <input type="text" placeholder='Your Name'/>
-          <input type="email" placeholder='Email Address' />
-          <input type="password" placeholder='Password'/>
-        </div>
-        <button>Continue</button>
-        <p className='loginsignup-login'>Already have an Account? <span>Login here</span></p>
-        <div className="loginsignup-agree">
-          <input type="checkbox" name='' id=''/>
-          <p>By continuing, i agree to the terms of use & privacy and policy.</p>
-        </div>
-      </div>
-        
-    </div>
-  )
-}
 
-export default loginSignup
+        <div className="loginsignup-header">
+          <h1>Create Account</h1>
+          <p>Join us today and start shopping</p>
+        </div>
+
+        <div className="loginsignup-fields">
+          <div className="input-group">
+            <label>Full Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Email Address</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Create a password"
+            />
+          </div>
+        </div>
+
+        <button className="signup-button">
+          Create Account
+        </button>
+
+        <p className="loginsignup-login">
+          Already have an account?
+          <span> Login here</span>
+        </p>
+
+        <div className="loginsignup-agree">
+          <input type="checkbox" id="agree" />
+          <label htmlFor="agree">
+            By continuing, I agree to the{" "}
+            <span>Terms of Use</span> and{" "}
+            <span>Privacy Policy</span>.
+          </label>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+
+
+
+export default LoginSignup
