@@ -5,6 +5,7 @@ import Offers from '../Components/Offers/Offers.jsx'
 import NewCollection from '../Components/NewCollection/NewCollection.jsx'
 import NewsLetter from '../Components/NewsLetter/NewsLetter.jsx'
 
+
 const Shop = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Shop = () => {
         <Offers/>
         <NewCollection/>
         <NewsLetter/>
+        
 
     </div>
   )
