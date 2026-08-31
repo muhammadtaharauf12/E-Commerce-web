@@ -3,16 +3,16 @@
 import './App.css'
 import Navbar from './Components/Navbar/Navbar.jsx'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Shop from './Pages/Shop.jsx'
+import Shop from './Pages/shop.jsx'
 import ShopCategory from './Pages/ShopCategory.jsx'
-import Product from './Pages/Product.jsx'
-import Cart from './Pages/Cart.jsx'
+import Product from './Pages/product.jsx'
+import Cart from './Pages/cart.jsx'
 
 import Footer from './Components/Footer/Footer.jsx'
 import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from './Components/Assets/banner_women.png'
 import kid_banner from './Components/Assets/banner_kids.png'
-import LoginSignup from './Pages/LoginSignup.jsx'
+import LoginSignup from './Pages/loginSignup.jsx'
 
 function App() {
 
