@@ -1,0 +1,244 @@
+
+/* =========================
+   CHECKOUT PAGE
+========================= */
+
+.checkout {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+/* =========================
+   SHIPPING FORM
+========================= */
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-form h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 0 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff4141;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    transition: 0.3s ease;
+}
+
+.checkout-form input {
+    height: 50px;
+}
+
+.checkout-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+    border-color: #ff4141;
+    box-shadow: 0 0 0 3px rgba(255, 65, 65, 0.10);
+}
+
+.checkout-form input::placeholder,
+.checkout-form textarea::placeholder {
+    color: #999;
+}
+
+/* Place Order Button */
+
+.checkout-form button {
+    width: 100%;
+    height: 52px;
+    margin-top: 5px;
+    background: #ff4141;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.checkout-form button:hover {
+    background: #e83232;
+    transform: translateY(-2px);
+}
+
+.checkout-form button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+.checkout-summary {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-summary h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 0 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff4141;
+}
+
+/* Product Rows */
+
+.checkout-summary .checkout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #555;
+}
+
+.checkout-summary .checkout-row img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.checkout-summary .checkout-row span {
+    flex: 1;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.checkout-summary .checkout-row b {
+    color: #171717;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Summary Divider */
+
+.checkout-summary hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Total */
+
+.checkout-summary .checkout-row.total {
+    border: none;
+    padding-top: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #171717;
+}
+
+.checkout-summary .checkout-row.total b {
+    color: #ff4141;
+    font-size: 23px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+    .checkout {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        gap: 25px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .checkout {
+        padding: 15px;
+        margin: 20px auto;
+        gap: 20px;
+    }
+
+    .checkout-form,
+    .checkout-summary {
+        padding: 20px;
+    }
+
+    .checkout-form h2,
+    .checkout-summary h2 {
+        font-size: 21px;
+    }
+
+    .checkout-form input {
+        height: 47px;
+    }
+
+    .checkout-form input,
+    .checkout-form textarea {
+        font-size: 13px;
+    }
+
+    .checkout-summary .checkout-row {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .checkout-summary .checkout-row img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .checkout-summary .checkout-row b {
+        font-size: 13px;
+    }
+
+    .checkout-summary .checkout-row.total {
+        font-size: 16px;
+    }
+
+    .checkout-summary .checkout-row.total b {
+        font-size: 20px;
+    }
+}

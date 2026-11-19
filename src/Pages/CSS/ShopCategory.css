@@ -1,0 +1,155 @@
+
+.shopcategory-banner {
+    display: block;
+    margin: 30px auto;
+    width: 82%;
+}
+
+/* Category sorting section */
+.shopcategory-indexSort {
+    display: flex;
+    margin: 25px 170px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.shopcategory-indexSort p span {
+    font-weight: 600;
+}
+
+/* Sort button wrapper */
+.shopcategory-Sort {
+    position: relative;
+    width: 210px;
+    z-index: 20;
+}
+
+/* Sort By button */
+.sort-trigger {
+    width: 100%;
+    height: 48px;
+    padding: 0 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+
+    cursor: pointer;
+    font-size: 15px;
+    color: #171717;
+
+    outline: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.sort-trigger:hover {
+    color: #ff4141;
+    border-color: #ff4141;
+    background: #fff5f5;
+}
+
+/* Arrow */
+.sort-arrow {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.sort-arrow.active {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.sort-dropdown {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    z-index: 100;
+
+    animation: dropdownFade 0.2s ease;
+}
+
+/* Dropdown options */
+.sort-option {
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+
+    border: none;
+    outline: none;
+    background: white;
+
+    text-align: left;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+/* Option hover */
+.sort-option:hover {
+    background: #fff0f0;
+    color: #ff4141;
+}
+
+/* Selected option */
+.sort-option.selected {
+    background: #fff0f0;
+    color: #ff4141;
+    font-weight: 600;
+}
+
+/* Dropdown animation */
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Products grid */
+.shopcategory-products {
+    margin: 20px 170px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 80px;
+}
+
+/* Explore More */
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+}

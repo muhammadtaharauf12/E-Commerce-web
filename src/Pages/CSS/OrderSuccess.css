@@ -1,0 +1,285 @@
+
+/* =========================
+   ORDER SUCCESS PAGE
+========================= */
+
+.order-page {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    animation: pageFade 0.5s ease;
+}
+
+/* SUCCESS HEADING */
+
+.order-page .success-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    color: #15803d;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 25px 15px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #e8f8ef, #f5fff8);
+    border: 1px solid #bbf7d0;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.10);
+}
+
+.success-heading span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 36px;
+    height: 36px;
+    background: #16a34a;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+/* ORDER ID */
+
+.order-page .order-id {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin: 20px 0 30px;
+}
+
+.order-id b {
+    color: #171717;
+}
+
+/* COMMON CARDS */
+
+.order-page .order-card {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* CARD HEADINGS */
+
+.order-page .order-card h3 {
+    font-size: 21px;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 0 20px;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* PRODUCT ROWS */
+
+.order-page .checkout-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.order-page .checkout-row img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.order-page .checkout-row span {
+    flex: 1;
+    font-weight: 500;
+}
+
+.order-page .checkout-row b {
+    color: #171717;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* DIVIDER */
+
+.order-page .order-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+/* TOTAL */
+
+.order-page .checkout-row.total {
+    padding-top: 18px;
+    font-size: 18px;
+    color: #171717;
+}
+
+.order-page .checkout-row.total b {
+    color: #ff4141;
+    font-size: 21px;
+}
+
+/* SHIPPING CARD */
+
+.order-page .shipping-card {
+    border: 1px solid #dce9e1;
+}
+
+.order-page .shipping-card h3 {
+    color: #15803d;
+    border-bottom: 2px solid #dcfce7;
+}
+
+.shipping-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.shipping-detail {
+    background: #f8faf9;
+    border: 1px solid #edf1ee;
+    border-radius: 10px;
+    padding: 13px 16px;
+}
+
+.shipping-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #16a34a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+}
+
+.order-page .shipping-detail p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    overflow-wrap: anywhere;
+}
+
+/* MY ORDERS BUTTON */
+
+.order-page .orders-link {
+    display: block;
+    text-decoration: none;
+}
+
+.order-page .orders-btn {
+    display: block;
+    width: 220px;
+    height: 55px;
+    margin: 35px auto;
+    background: #ff4141;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.order-page .orders-btn:hover {
+    background: #e83232;
+    transform: translateY(-3px);
+}
+
+/* NO ORDER FOUND */
+
+.order-page > a:not(.orders-link) {
+    display: block;
+    text-align: center;
+    color: #ff4141;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* ANIMATION */
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    .order-page {
+        margin: 25px auto;
+        padding: 12px;
+    }
+
+    .order-page .success-heading {
+        font-size: 22px;
+        padding: 20px 10px;
+        gap: 8px;
+    }
+
+    .success-heading span {
+        min-width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+
+    .order-page .order-card {
+        padding: 17px;
+        margin: 18px 0;
+    }
+
+    .order-page .order-card h3 {
+        font-size: 19px;
+    }
+
+    .order-page .checkout-row {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .order-page .checkout-row img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .order-page .checkout-row.total {
+        font-size: 16px;
+    }
+
+    .order-page .checkout-row.total b {
+        font-size: 18px;
+    }
+
+    .order-page .shipping-detail p {
+        font-size: 14px;
+    }
+
+    .order-page .orders-btn {
+        width: 100%;
+    }
+}

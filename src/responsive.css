@@ -1,0 +1,219 @@
+/* =====================================================
+   responsive.css  -  laptop, tablet aur mobile ke liye
+   main.jsx mein SAB se aakhir mein import karein.
+   Koi global reset (* / img / body) nahi hai.
+   ===================================================== */
+
+/* ---------- Navbar: cart count ko position se set kiya ---------- */
+.nav-login-cart { position: relative; }
+.nav-cart-count {
+  position: absolute;
+  right: -8px;
+  top: 6px;
+  margin: 0;
+}
+
+/* ---------- Fluid cards (350px fixed width hata di) ---------- */
+.item { width: 100%; }
+.item img { width: 100%; height: auto; display: block; }
+
+/* ---------- Popular / Related: 4 column grid ---------- */
+.popular,
+.relatedproducts { height: auto; padding: 0 40px 60px; box-sizing: border-box; }
+
+.popular-item,
+.relatedproducts-item {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* ---------- New collections ---------- */
+.new-colletions { padding: 0 40px; box-sizing: border-box; }
+.collections {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* ---------- Hero ---------- */
+.hero { overflow: hidden; }
+.hero-left { padding-left: clamp(24px, 9vw, 180px); }
+.hero-left p { font-size: clamp(44px, 7vw, 100px); }
+.hero > img { max-width: 48%; height: auto; align-self: center; object-fit: contain; }
+.hero-right { display: none; }
+
+/* ---------- Offers / Newsletter ---------- */
+.offers {
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  min-height: 60vh;
+  padding: 0 clamp(24px, 6vw, 140px);
+  box-sizing: border-box;
+}
+.offers-left h1 { font-size: clamp(34px, 5vw, 80px); line-height: 1.2; }
+.offers-left { padding: 40px 0; }
+.offers-right img { max-width: 100%; height: auto; }
+
+.newsletter {
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  min-height: 40vh;
+  padding: 40px clamp(20px, 6vw, 140px);
+  box-sizing: border-box;
+  text-align: center;
+}
+.newsletter h1 { font-size: clamp(30px, 4vw, 55px); }
+.newsletter div { width: 100%; max-width: 730px; box-sizing: border-box; }
+.newsletter input { flex: 1; width: auto; min-width: 0; }
+
+/* ---------- Category page ---------- */
+.shopcategory-indexSort { margin: 0 clamp(20px, 8vw, 170px); }
+.shopcategory-products {
+  margin: 20px clamp(20px, 8vw, 170px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px 30px;
+}
+.shopcategory-banner { max-width: 100%; height: auto; }
+
+/* ---------- Product page ---------- */
+.breadcrum { margin: 40px clamp(20px, 8vw, 170px); flex-wrap: wrap; }
+.descriptionbox { margin: 80px clamp(20px, 8vw, 170px); }
+
+/* ---------- Footer ---------- */
+.footer-links { flex-wrap: wrap; justify-content: center; padding: 0; }
+
+/* ---------- Checkout / Orders pages ---------- */
+.checkout-form, .checkout-summary { box-sizing: border-box; }
+.checkout-form input, .checkout-form textarea { width: 100%; box-sizing: border-box; }
+
+/* =====================================================
+   LAPTOP  (<= 1280px)
+   ===================================================== */
+@media (max-width: 1280px) {
+  .navbar { padding: 14px 20px; }
+  .nav-logo p { font-size: 30px; }
+  .nav-menu { gap: 30px; font-size: 18px; }
+  .nav-login-cart { gap: 30px; }
+  .nav-login-cart button { width: 130px; height: 50px; font-size: 18px; }
+
+  .popular h1, .new-colletions h1 { font-size: 46px; }
+  .relatedproducts h1 { font-size: 40px; }
+  .popular-item, .relatedproducts-item, .collections { gap: 20px; }
+}
+
+/* =====================================================
+   TABLET  (<= 1024px)
+   ===================================================== */
+@media (max-width: 1024px) {
+  .navbar { flex-wrap: wrap; justify-content: space-between; row-gap: 12px; }
+  .nav-menu { order: 3; width: 100%; justify-content: center; }
+
+  .hero { height: auto; min-height: 70vh; }
+  .hero-left { padding: 40px 0 40px 40px; }
+
+  .popular-item,
+  .relatedproducts-item,
+  .collections,
+  .shopcategory-products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .popular h1, .new-colletions h1 { font-size: 38px; }
+  .offers, .newsletter { width: 90%; }
+  .newsletter p { font-size: 16px; }
+  .newsletter div button { width: 150px; }
+}
+
+/* =====================================================
+   MOBILE  (<= 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+  .nav-logo p { font-size: 24px; }
+  .nav-logo img { width: 34px; height: auto; }
+  .nav-menu { gap: 22px; font-size: 16px; }
+  .nav-login-cart { gap: 18px; }
+  .nav-login-cart button { width: 100px; height: 42px; font-size: 16px; }
+
+  /* Hero: upar neeche */
+  .hero { flex-direction: column; min-height: auto; }
+  .hero-left { padding: 40px 20px 10px; align-items: center; text-align: center; }
+  .hero-hand-icon { justify-content: center; }
+  .hero-hand-icon img { width: 60px; }
+  .hero-left h2 { font-size: 18px; }
+  .hero-latest-btn { width: 220px; height: 54px; font-size: 17px; margin: 20px auto 0; }
+  .hero > img { max-width: 80%; align-self: center; margin-bottom: 30px; }
+
+  .popular, .relatedproducts, .new-colletions { padding-left: 16px; padding-right: 16px; }
+  .popular-item,
+  .relatedproducts-item,
+  .collections,
+  .shopcategory-products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .popular-item, .collections { margin-top: 30px; }
+  .popular h1, .new-colletions h1, .relatedproducts h1 { font-size: 28px; text-align: center; }
+  .popular hr, .new-colletions hr, .relatedproducts hr { width: 120px; height: 5px; }
+
+  /* Offers */
+  .offers {
+    flex-direction: column;
+    width: 92%;
+    padding: 30px 20px 0;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  .offers-left { align-items: center; }
+  .offers-left p { font-size: 16px; }
+  .offers-left button { width: 200px; height: 54px; font-size: 18px; }
+  .offers-right { justify-content: center; padding-top: 24px; }
+  .offers-right img { max-height: 320px; width: auto; }
+
+  /* Newsletter */
+  .newsletter { width: 92%; margin-bottom: 70px; gap: 18px; }
+  .newsletter div { height: 56px; }
+  .newsletter input { margin-left: 16px; font-size: 14px; }
+  .newsletter div button { width: 110px; height: 56px; font-size: 14px; }
+
+  /* Category */
+  .shopcategory-banner { width: 92%; }
+  .shopcategory-indexSort { flex-direction: column; align-items: flex-start; gap: 12px; margin: 0 16px; }
+  .shopcategory-products { margin: 20px 16px; }
+  .shopcategory-loadmore { margin: 60px auto; width: 180px; height: 56px; font-size: 16px; }
+
+  /* Product page extras */
+  .breadcrum { margin: 24px 16px; font-size: 13px; }
+  .descriptionbox { margin: 50px 16px; }
+  .descriptionbox-nav-box { width: 50%; height: 56px; }
+  .descriptionbox-description { padding: 24px 18px 36px; }
+
+  /* Footer */
+  .footer { gap: 30px; padding: 0 16px; box-sizing: border-box; }
+  .footer-logo p { font-size: 32px; }
+  .footer-links { gap: 14px 24px; font-size: 16px; }
+  .footer-copyright { font-size: 14px; text-align: center; gap: 20px; }
+
+  /* Checkout / Orders */
+  .checkout, .order-page { padding: 20px 16px; }
+  .checkout { flex-direction: column; gap: 24px; }
+  .checkout-form, .checkout-summary { min-width: 0; width: 100%; }
+}
+
+/* =====================================================
+   CHHOTE PHONE  (<= 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+  .navbar { padding: 12px 14px; }
+  .nav-menu { gap: 16px; font-size: 15px; }
+  .nav-login-cart button { width: 84px; height: 38px; font-size: 14px; }
+
+  .hero-left p { font-size: 42px; }
+  .item p { font-size: 14px; }
+  .item-prices { gap: 10px; }
+  .item-price-new, .item-price-old { font-size: 15px; }
+
+  .newsletter div button { width: 90px; }
+  .checkout-row img { width: 40px; height: 50px; }
+  .checkout-row { font-size: 14px; }
+  .order-page h1 { font-size: 22px; }
+}

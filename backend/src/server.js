@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import { createClient } from "@supabase/supabase-js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 // Admin client (secret key): sirf backend mein
 const supabase = createClient(
@@ -13,6 +15,8 @@ const authClient = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_PUBLISHABLE_KEY
 );
+
+
 
 const app = express();
 app.use(cors());
@@ -28,6 +32,13 @@ async function requireAuth(req, res, next) {
   req.user = data.user;
   next();
 }
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(
+  "/products",
+  express.static(path.join(__dirname, "../products"))
+);
 
 // ---------- PRODUCTS ----------
 app.get("/api/products", async (req, res) => {
